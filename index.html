@@ -1878,11 +1878,29 @@ footer {
     font-size: 12px;
   }
 
-  /* Nav: hide Free Trial, shrink logo, show hamburger */
-  .btn-nav.outline { display: none; }
+  /* Nav: hide both buttons, shrink logo, show hamburger */
+  .btn-nav.outline,
+  .nav-buttons .btn-nav.primary { display: none; }
   .logo-icon { height: 44px; }
   .logo-text { display: none; }
   .hero-content { bottom: 210px; }
+
+  /* Mobile menu buttons */
+  .mobile-menu-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(242,240,240,0.07);
+  }
+  .mobile-menu-btns .btn-nav {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
 
   /* Testimonial rating mobile */
   .testimonials-stars {
@@ -1941,6 +1959,10 @@ footer {
   <a href="#">Gear & Supplements</a>
   <a href="#contact">Location</a>
   <a href="#">More</a>
+  <div class="mobile-menu-btns">
+    <button class="btn-nav outline">Free Trial</button>
+    <button class="btn-nav primary">Book a Gym Tour</button>
+  </div>
 </div>
 
 <!-- ─── HERO ─────────────────────────────────────── -->
